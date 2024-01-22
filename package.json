@@ -12,16 +12,22 @@
     "lint:fix": "eslint --fix . --ext js,ts",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "cypress:open": "cypress open"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "dropzone": "^6.0.0-beta.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "reflect-metadata": "^0.2.1",
-    "swiper": "^11.0.5"
+    "styled-components": "^6.1.8",
+    "swiper": "^11.0.5",
+    "uuid": "^9.0.1",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.8",
@@ -37,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "cypress": "^13.6.3",
     "eslint": "^8.55.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -45,6 +52,6 @@
     "husky": "^8.0.0",
     "storybook": "^7.6.8",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.12"
   }
 }

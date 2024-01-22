@@ -1,34 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ES2020",
+    "module": "ESNext",
     "sourceMap": true,
     "outDir": "./dist",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "ES2020", "DOM", "DOM.Iterable"],
     "strict": true,
 
-    "strictPropertyInitialization": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "types": ["reflect-metadata"],
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "types": ["reflect-metadata"],
+    "skipLibCheck": true
   },
 
   "include": ["**/*.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules", "dist"]
 }
